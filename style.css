@@ -1,0 +1,89 @@
+body {
+    background-color: rgb(250, 249, 206);
+    /* background-image: url(Kerlolis\ Aymen.jpg);
+    background-size: cover;
+    background-repeat:repeat; */
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    margin: 0px;
+}
+
+.withoutbar{
+    padding-left : 20px
+}
+.contact {
+   /* border: 5px solid red ; */
+   display: block;
+}
+
+h1 {
+    color: brown;
+}
+
+.one{
+   
+    border-bottom-color: red ;
+}
+.two{
+    size: 2px;
+    border-bottom-color: black;
+}
+.three{
+    size: 2px;
+    border-bottom-color : green ;
+}
+
+.one ,
+.two , 
+.three
+{
+    width: fit-content;
+    border-bottom-width: 5px;
+    margin :10px ;
+    border-radius: 10px;
+    border-bottom-style: solid;
+    background-color: #b4cf69;
+    padding: 10px;
+
+}
+.kk
+{
+
+    height: 150px;
+    /* font-size: 250%; */
+    overflow: auto;
+}
+
+header , footer
+{
+    background-color: brown;
+   margin: 0;
+    text-align:center;
+    padding: 20px;
+    font-size: 180%;
+    font-weight: bold;
+    color: azure;
+
+}
+header
+{
+    text-align: left;
+}
+
+.aboutme img , 
+.aboutme p
+{
+    float: left;
+}
+.aboutme p{
+    width: calc(100% - 200px);
+}
+
+.clear
+{
+    clear: both;
+}
+.aboutme
+{
+    background-color: blue;
+}
