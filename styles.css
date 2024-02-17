@@ -1,0 +1,130 @@
+/* styles.css */
+
+
+html
+{
+    direction: rtl;
+    font-family: "Hacen Maghreb Bd";
+    margin: 0px;
+
+}
+h2 ,p  {
+    
+    font-size: 12pt;
+    font-family: "Hacen Maghreb Bd";
+    margin: 0px;
+   
+}
+.barandquestions
+{
+    display: flex;
+    flex-direction: row;
+    /* height: 500px; */
+    width: 21cm;
+}
+.questions {
+   
+    position: relative;
+    left: 15px;
+    width: 18cm;
+  
+}
+.question
+{
+     display: flex;
+    flex-direction: row;
+    margin:10px 0px 10px 0px;
+}
+.bar
+{
+
+    height:auto;
+    width: 2cm;
+    
+    background-color: #FEF9CD;
+    border-left:solid #222E4F 0.07cm;  
+
+}
+
+.Div{
+    margin-right:0.1cm;
+    width: fit-content;
+}
+
+
+h2{
+    margin-top: 0.1cm;
+}
+
+
+.questionNumberBox
+{
+    width: 0.64cm;
+    height:0.64cm;
+    background-color: #8E1913;
+    outline: solid white 1pt;
+    border-radius: 0.24cm;
+    display: flex;
+   align-items: center;
+   position: relative;
+}
+
+.innerbox{
+    width: 0.5cm;
+    height: 0.5cm;
+    background-color: #BE1818;
+    border: solid white 0.2pt;
+    border-radius: 0.21cm;
+    margin: auto;
+    text-align: center;
+    color: white
+}
+.line
+{
+    width: 50%;
+    background-color: black;
+    height: 1px;
+    margin: auto;
+    margin-top: 10px;
+}
+.a4
+{
+    width: 21cm;
+    height: 29.7cm;
+    background-color: #BE1818;
+    margin: 0cm;
+}
+body{
+    margin: 0cm;
+}
+.letter
+{
+    border: 0.05cm solid #252D4F;
+    border-radius: 1cm;
+    width: 0.47cm;
+    height: 0.47cm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   margin-left: 0.1cm;
+   margin-right: 0.3cm;
+}
+.options
+{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.option
+{
+    display: flex;
+    margin-left: 0.3cm  ;
+    width:auto;
+     
+    /* background-color: aqua; */
+}
+
+.answer
+{
+    width: fit-content;
+}
