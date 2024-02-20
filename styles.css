@@ -1,12 +1,18 @@
 /* styles.css */
 
-
+@media print {
+    pre, blockquote {page-break-inside: avoid;}
+  }
+  
+@page {
+    margin: 2cm; /* Adjust margins as needed */
+  }
 html
 {
     direction: rtl;
     font-family: "Hacen Maghreb Bd";
     margin: 0px;
-
+    src: url("Hacen Maghreb Bd.ttf");
 }
 h2 ,p  {
     
@@ -26,7 +32,8 @@ h2 ,p  {
    
     position: relative;
     left: 15px;
-    width: 18cm;
+    width: 21cm;
+    padding: 2cm 0cm 2cm 2cm;
   
 }
 .question
@@ -34,7 +41,21 @@ h2 ,p  {
      display: flex;
     flex-direction: row;
     margin:10px 0px 10px 0px;
+    page-break-inside: avoid;
+    
 }
+.question::after {
+    content: "";
+    position: absolute;
+    /* bottom: -10px; */
+    /* left: 50%; */
+    transform: translateX(-50%);
+    width: 50%;
+    height: 0.5px;
+    background-color: black;
+    border-radius: 200px;
+    
+  }
 .bar
 {
 
@@ -96,6 +117,7 @@ h2{
 }
 body{
     margin: 0cm;
+    /* background-color: grey; */
 }
 .letter
 {
