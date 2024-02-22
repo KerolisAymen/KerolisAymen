@@ -12,7 +12,7 @@ html
     direction: rtl;
     font-family: "Hacen Maghreb Bd";
     margin: 0px;
-    src: url("Hacen Maghreb Bd.ttf");
+   
 }
 h2 ,p  {
     
@@ -149,4 +149,8 @@ body{
 .answer
 {
     width: fit-content;
+}
+
+html, body {
+    scroll-behavior: smooth;
 }

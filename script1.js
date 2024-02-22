@@ -1,5 +1,5 @@
 // Function to fetch the questions file and parse its contents
-function fetchQuestionsFromFile(filename) {
+async function fetchQuestionsFromFile(filename) {
   return fetch(filename)
     .then((response) => {
       if (!response.ok) {
@@ -20,6 +20,27 @@ function fetchQuestionsFromFile(filename) {
       return [];
     });
 }
+
+function fetchQuestionsFromJson(url) {
+  return new Promise((resolve, reject) => {
+    fetch(url)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        resolve(data);
+      })
+      .catch(error => {
+        reject(error);
+      });
+  });
+}
+
+
+
 function createoption(l, ans) {
   let option = document.createElement("div");
   option.className = "option";
@@ -95,8 +116,11 @@ function adjustwidth(selector,one){
  }
 }
 // Usage example
-const filename = "data.txt";
-fetchQuestionsFromFile(filename).then((questions) => {
+const filename = "data.json";
+
+
+
+fetchQuestionsFromJson(filename).then((questions) => {
   console.log(questions[0].question);
   for (let i = 0; i < questions.length; i++) {
     const question = makequestion(
@@ -111,5 +135,17 @@ fetchQuestionsFromFile(filename).then((questions) => {
     questions2.appendChild(question);
     adjustwidth(".option",questions[i].options[0]);
   }
+  
 });
 
+
+setTimeout(function() {
+  window.scroll({
+    top: document.body.scrollHeight,
+    left: 0,
+    behavior: 'smooth'
+  });
+}, 100); // Wait for 2000 milliseconds (2 seconds)
+
+  
+ 
