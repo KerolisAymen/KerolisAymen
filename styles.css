@@ -8,16 +8,18 @@
     margin: 2cm; /* Adjust margins as needed */
   }
 
-@font-face {
+/* @font-face {
     font-family:"Hacen Maghreb Bd";
     src: url("https://github.com/KerolisAymen/KerolisAymen/blob/main/Hacen%20Maghreb%20Bd.ttf");
-}
+} */
   
 html
 {
     direction: rtl;
     font-family: "Hacen Maghreb Bd";
     margin: 0px;
+    font-size: 12pt;
+    
    
 }
 h2 ,p  {
