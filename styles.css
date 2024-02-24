@@ -8,13 +8,11 @@
     margin: 2cm; /* Adjust margins as needed */
   }
 
-  @font-face {
-    font-family: 'YourCustomFont';
-    src: url('hacen_maghreb_bd-webfont.woff2') format('woff2'), /* Modern Browsers */
-         url('hacen_maghreb_bd-webfont.woff') format('woff');   /* Older Browsers */
-    /* Add more src declarations for additional file formats if needed */
-  }
-
+@font-face {
+    font-family:"Hacen Maghreb Bd";
+    src: url(Hacen\ Maghreb\ Bd.ttf);
+}
+  
 html
 {
     direction: rtl;
