@@ -8,11 +8,20 @@
     margin: 2cm; /* Adjust margins as needed */
   }
 
-@font-face {
+ .Hacen-Maghreb-Bd{
     font-family:"Hacen Maghreb Bd";
     src: url(Hacen\ Maghreb\ Bd.ttf);
+    font-weight: 700;
+    font-style: normal;
 }
   
+/* .el-messiri {
+    font-family: "El Messiri", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  } */
+
 html
 {
     direction: rtl;

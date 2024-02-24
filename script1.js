@@ -133,10 +133,10 @@ fetchQuestionsFromJson(filename).then((questions) => {
     );
     let questions2 = document.getElementsByClassName("questions")[0];
     questions2.appendChild(question);
-    setTimeout(() => {
+
       
-      adjustwidth(".option",questions[i].options[0]);
-    },100);
+    adjustwidth(".option",questions[i].options[0]);
+   
   }
   
 });
