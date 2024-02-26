@@ -1,60 +1,93 @@
 
 
-@media print {
-    pre, blockquote {page-break-inside: avoid;}
-  }
-  
-@page {
-    margin: 2cm; /* Adjust margins as needed */
-  }
+.question {
+    page-break-inside: avoid;
+}
 
-/* @font-face{
-    font-family:"Hacen Maghreb Bd";
-    src: url(Hacen\ Maghreb\ Bd.ttf);
-    /* font-weight: 700; */
-    /* font-style: normal; */
-
-  
-
-html
+.title
 {
+    font-weight: 200;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top:0 ;
+    text-align: center;
+    justify-content: center;
+    background-color: #222E4F;
+    width: 21cm;
+    height: 2cm;
+    color: white;
+    
+}
+.header
+{
+  
+    background-color: white;
+    height: 1.5cm;
+    width: 21cm;
+}
+
+.footer
+{
+    
+    padding-top: auto;
+    margin-top:auto;
+    margin-bottom: 1cm;
+    display: flex;
+    justify-content: space-around;
+    font-weight: 100;
+    color: rgb(0, 0, 0);
+    border-top: black solid 0.05cm; 
+    
+}
+
+
+
+html {
     direction: rtl;
     font-family: "Hacen Maghreb Bd";
     margin: 0px;
     font-size: 12pt;
-    
-   
 }
-h2 ,p  {
-    
+
+h2,
+p {
+
     font-size: 12pt;
     font-family: "Hacen Maghreb Bd";
     margin: 0px;
-   
+
 }
-.barandquestions
-{
+
+.barandquestions {
     display: flex;
     flex-direction: row;
     /* height: 500px; */
     width: 21cm;
 }
+
 .questions {
-   
+
     position: relative;
     left: 15px;
     width: 21cm;
-    padding: 2cm 0cm 2cm 2cm;
-  
+    padding: 1.5cm 0cm 2cm 2cm;
+    
+
 }
-.question
-{
-     display: flex;
+
+.question {
+    display: flex;
+    overflow: auto;
     flex-direction: row;
-    margin:10px 0px 10px 0px;
+    margin: 10px 0px 10px 0px;
     page-break-inside: avoid;
     
+    resize: both;
+    max-width:max-content;
 }
+
 .question::after {
     content: "";
     position: absolute;
@@ -66,42 +99,42 @@ h2 ,p  {
     background-color: black;
     border-radius: 200px;
     
-  }
-.bar
-{
-
-    height:auto;
-    width: 2cm;
-    
-    background-color: #FEF9CD;
-    border-left:solid #222E4F 0.07cm;  
 
 }
 
-.Div{
-    margin-right:0.1cm;
+.bar {
+
+    height: auto;
+    width: 2cm;
+
+    background-color: #FEF9CD;
+    border-left: solid #222E4F 0.07cm;
+
+}
+
+.Div {
+    margin-right: 0.1cm;
     width: fit-content;
 }
 
 
-h2{
+h2 {
     margin-top: 0.1cm;
 }
 
 
-.questionNumberBox
-{
+.questionNumberBox {
     width: 0.64cm;
-    height:0.64cm;
+    height: 0.64cm;
     background-color: #8E1913;
     outline: solid white 1pt;
     border-radius: 0.24cm;
     display: flex;
-   align-items: center;
-   position: relative;
+    align-items: center;
+    position: relative;
 }
 
-.innerbox{
+.innerbox {
     width: 0.5cm;
     height: 0.5cm;
     background-color: #BE1818;
@@ -111,27 +144,30 @@ h2{
     text-align: center;
     color: white
 }
-.line
-{
+
+.line {
     width: 50%;
     background-color: black;
     height: 1px;
     margin: auto;
     margin-top: 10px;
 }
-.a4
-{
+
+.a4 {
     width: 21cm;
     height: 29.7cm;
     background-color: #BE1818;
     margin: 0cm;
 }
-body{
+
+body {
     margin: 0cm;
     /* background-color: grey; */
+    counter-reset: page;
+    
 }
-.letter
-{
+
+.letter {
     border: 0.05cm solid #252D4F;
     border-radius: 1cm;
     width: 0.47cm;
@@ -139,25 +175,31 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-   margin-left: 0.1cm;
-   margin-right: 0.3cm;
+    margin-left: 0.1cm;
+    margin-right: 0.3cm;
 }
-.options
-{
+
+.options {
     display: flex;
     flex-wrap: wrap;
-    
+
 }
-.option
-{
+
+.option {
     display: flex;
-    margin-left: 0.3cm  ;
-    width:auto;
-     
+    margin-left: 0.3cm;
+    width: auto;
+
     /* background-color: aqua; */
 }
 
-.answer
-{
+.answer {
     width: fit-content;
+}
+
+img {
+    max-height: 3cm;
+    margin-right: auto;
+    margin-top: 0.5cm;
+
 }

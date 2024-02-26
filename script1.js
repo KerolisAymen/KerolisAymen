@@ -55,7 +55,7 @@ function createoption(l, ans) {
   option.appendChild(answer);
   return option;
 }
-function makequestion(qnumber, q, one, two, three, four) {
+function makequestion(qnumber, q, one, two, three, four ,picsrc) {
  
    
   let question = document.createElement("div");
@@ -88,7 +88,14 @@ function makequestion(qnumber, q, one, two, three, four) {
   options.appendChild(createoption("ب", two));
   options.appendChild(createoption("ج", three));
   options.appendChild(createoption("د", four));
-  
+
+
+  if (picsrc!= undefined){
+  let pic = document.createElement("img"); 
+  pic.src="\pics\\"+picsrc.split("\\")[picsrc.split("\\").length-1] ;
+  console.log(picsrc.split("\\")); 
+  question.appendChild(pic) ; 
+  }
 
   return question;
   
@@ -129,7 +136,8 @@ fetchQuestionsFromJson(filename).then((questions) => {
       questions[i].options[0],
       questions[i].options[1],
       questions[i].options[2],
-      questions[i].options[3]
+      questions[i].options[3],
+      questions[i].imgsrc
     );
     let questions2 = document.getElementsByClassName("questions")[0];
     questions2.appendChild(question);
@@ -150,5 +158,4 @@ setTimeout(function() {
   });
 }, 100); // Wait for 2000 milliseconds (2 seconds)
 
-  
- 
+
