@@ -33,7 +33,7 @@
     
     padding-top: auto;
     margin-top:auto;
-    margin-bottom: 1cm;
+    margin-bottom: 0.5cm;
     display: flex;
     justify-content: space-around;
     font-weight: 100;
@@ -49,6 +49,7 @@ html {
     font-family: "Hacen Maghreb Bd";
     margin: 0px;
     font-size: 12pt;
+    
 }
 
 h2,
@@ -69,39 +70,54 @@ p {
 
 .questions {
 
-    position: relative;
-    left: 15px;
+    /* position: relative; */
+    /* left: 15px; */
+    /* width: 21cm; */
+    padding: 1.5cm 1.5cm 0cm 1.5cm;
+    box-sizing: border-box;
     width: 21cm;
-    padding: 1.5cm 0cm 2cm 2cm;
-    
 
 }
 
 .question {
+    position: relative;
     display: flex;
-    overflow: auto;
     flex-direction: row;
     margin: 10px 0px 10px 0px;
     page-break-inside: avoid;
-    
-    resize: both;
-    max-width:max-content;
+    border: solid 0.04cm ;
+    border-radius: 0.25cm;
+    /* overflow: auto; */
+    /* resize: both; */
+    /* max-width:max-content; */
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.question::after {
-    content: "";
-    position: absolute;
-    /* bottom: -10px; */
-    /* left: 50%; */
-    transform: translateX(-50%);
-    width: 50%;
-    height: 0.5px;
-    background-color: black;
-    border-radius: 200px;
-    
-
+.picdiv
+{
+    /* margin-right: auto; */
+    margin: 0.2cm auto 0.2cm 0.2cm;
+    max-width: 7cm ;
+    max-height: 7cm;
+    width: 7cm; /* Initial width */
+    height: auto; /* Maintain aspect ratio */
+    overflow: hidden; /* Allow scrolling if image overflows */
+    resize: both; /* Allow resizing */
+    border: 1px solid #ccc; /* Border for visual clarity */
+    border: none !important;
+    outline: none !important;
+    direction: ltr;
 }
 
+.questionpic {
+    box-sizing: border-box;
+    
+    width: 100%; /* Ensure image fills container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure proper layout */
+
+}
 .bar {
 
     height: auto;
@@ -113,8 +129,12 @@ p {
 }
 
 .Div {
+    margin: 0cm 0.1cm auto 0cm;
     margin-right: 0.1cm;
     width: fit-content;
+    /* resize: both; */
+    /* overflow: auto; */
+    left: 0.4cm;
 }
 
 
@@ -124,26 +144,30 @@ h2 {
 
 
 .questionNumberBox {
-    width: 0.64cm;
-    height: 0.64cm;
-    background-color: #8E1913;
-    outline: solid white 1pt;
-    border-radius: 0.24cm;
-    display: flex;
-    align-items: center;
+    display: inline-block;
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    height: 0cm;
+}
+.svg
+{
+  width: 0.7cm;
+}
+.innerbox {
     position: relative;
+    bottom: 0.8cm;
+    right: 0.0cm;
+    text-align: center;
+    color: white;
+    font-family: "hacen maghreb";
+    -webkit-text-stroke: #203158 0.4pt;
+    font-size: 14pt;
+    paint-order: stroke fill;
+    
 }
 
-.innerbox {
-    width: 0.5cm;
-    height: 0.5cm;
-    background-color: #BE1818;
-    border: solid white 0.2pt;
-    border-radius: 0.21cm;
-    margin: auto;
-    text-align: center;
-    color: white
-}
+
 
 .line {
     width: 50%;
@@ -189,7 +213,6 @@ body {
     display: flex;
     margin-left: 0.3cm;
     width: auto;
-
     /* background-color: aqua; */
 }
 
@@ -197,9 +220,11 @@ body {
     width: fit-content;
 }
 
-img {
-    max-height: 3cm;
-    margin-right: auto;
-    margin-top: 0.5cm;
-
+.questiontext
+{
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,163,196,1) 100%);
+    border-radius: 0.35cm;
+    padding: 0.03cm 0.2cm 0.03cm 0.2cm;
+    margin: 0.15cm;
 }
